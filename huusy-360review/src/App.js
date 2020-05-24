@@ -6,6 +6,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import CauHoi from './Components/CauHoi/Cauhoi';
 import ReViewCauHoi from './Components/ReViewCauHoi/ReViewCauHoi';
 import DanhMuc from './Components/DanhMuc/DanhMuc';
+import TatCaCauHoi from './Components/TatCaCauHoi/TatCaCauHoi'
 
 
 import './App.scss';
@@ -19,7 +20,7 @@ class App extends Component {
           <BrowserRouter>
             
             <Switch>
-              <Route exact path="/" component={ CauHoi}/>
+              <Route exact path="/" component={ TatCaCauHoi}/>
               <Route exact path="/CauHoi" component={ CauHoi}/>
               <Route path="/DanhMuc" component={ DanhMuc }/>
               <Route path="/ReViewCauHoi" component={ ReViewCauHoi }/>
