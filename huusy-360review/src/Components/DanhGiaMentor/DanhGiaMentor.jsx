@@ -53,9 +53,9 @@ class DanhGiaMentor extends Component {
   postDatabase=()=> {
     const {datathemchidinh} = this.state;
     axios.post('http://localhost:3001/users', {
-      nguoidanhgia:`${datathemchidinh.nguoidanhgia}`,
-      nguoiduocdanhgia: `${datathemchidinh.nguoiduocdanhgia}`,
-      thoihan: `${datathemchidinh.thoihan}`
+      nguoidanhgia:`huusy`,
+      nguoiduocdanhgia: `trandat`,
+      thoihan: `trang`
     })
     .then(function (response) {
       console.log(response);
