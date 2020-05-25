@@ -7,7 +7,11 @@ class DanhMuc extends Component {
     return (
       <div class="">
         <div class="wrapper ">
+<<<<<<< HEAD
           {/* header */}
+=======
+
+>>>>>>> master
           <div class="sidebar" data-color="white" data-active-color="danger">
 
             <div class="logo">
@@ -25,6 +29,7 @@ class DanhMuc extends Component {
                   <a href="/CauHoi">
                     <i class="nc-icon nc-bulb-63"></i>
                     <p>Câu hỏi</p>
+<<<<<<< HEAD
                   </a>
                 </li>
                 <li>
@@ -34,6 +39,17 @@ class DanhMuc extends Component {
                   </a>
                 </li>
                 <li>
+=======
+                  </a>
+                </li>
+                <li>
+                  <a href="/DanhMuc">
+                    <i class="nc-icon nc-glasses-2"></i>
+                    <p>Danh mục</p>
+                  </a>
+                </li>
+                <li>
+>>>>>>> master
                   <a href="/ReViewCauHoi">
                     <i class="nc-icon nc-bullet-list-67"></i>
                     <p>Review câu hỏi</p>
@@ -42,7 +58,11 @@ class DanhMuc extends Component {
               </ul>
             </div>
           </div>
+<<<<<<< HEAD
           {/* End header */}
+=======
+
+>>>>>>> master
           <div class="main-panel main-panel-height" >
 
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -171,10 +191,17 @@ class DanhMuc extends Component {
                         </div>
                       </div>
                     </div>
+<<<<<<< HEAD
                   </div>
                   <div class="txtNoiDung mt-4">
 
                   </div>
+=======
+                  </div>
+                  <div class="txtNoiDung mt-4">
+
+                  </div>
+>>>>>>> master
                   <div class="mt-2 w-100 d-flex justify-content-center btnApDung ">
                     <button type="button" class="btn btn-success text-center ">Áp dụng</button>
                   </div>
