@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import '../../styles.css';
-import {HeaderData} from './HeaderData/HeaderData';
-import {HeaderItem} from './HeaderItem';
+import './Header.scss';
+import HeaderData from './HeaderData/HeaderData';
+import HeaderItem from './HeaderItem';
 
 class Header extends Component {
     render() {
         return (
-            <div class="sidebar" data-color="white" data-active-color="danger">
+            <div class="sidebar header-fixed" data-color="white" data-active-color="danger">
 
             <div class="logo">
 
@@ -19,13 +20,13 @@ class Header extends Component {
 
             <div class="sidebar-wrapper">
               <ul class="nav">
-                  {HeaderData.map((item,idx)=>{
+                  {HeaderData.map((item,idx)=>
                       <HeaderItem
                       label={item.label}
                       url={item.url}
                         key={idx}
                       />
-                  })}
+                  )}
                 
               </ul>
             </div>

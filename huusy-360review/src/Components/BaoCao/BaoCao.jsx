@@ -55,7 +55,7 @@ class BaoCao extends Component {
                           <span class="navbar-toggler-bar bar3"></span>
                         </button>
                       </div>
-                      <a class="navbar-brand font-weight-bold text-danger" href="javascript:;">360 Evaluation System</a>
+                      <a class="navbar-brand font-weight-bold text-danger" href="">360 Evaluation System</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                       aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,7 +113,7 @@ class BaoCao extends Component {
               <h4 class="card-title font-weight-bold">Báo cáo</h4>
               {/* <!-- Filter --> */}
               <div class="form-group mb-4">
-                <label class="title" style="font-size: 1em" for="inputState">
+                <label class="title" style={{fontSize: '1em'}} for="inputState">
                   TÌm kiếm lựa chọn theo team
                 </label>
                 <select id="inputState" class="form-control">

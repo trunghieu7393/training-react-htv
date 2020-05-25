@@ -122,11 +122,11 @@ class BaoCao extends Component {
                 <div class="mt-3">
                   <div class="row align-items-baseline">
                     <h6 class="card-subtitle mb-3 text-muted">Tên:</h6>
-                    <p class="card-text" style="margin-left:6px">Trần Tuấn Đạt</p>
+                    <p class="card-text" style={{marginLeft: '6px'}}>Trần Tuấn Đạt</p>
                   </div>
                   <div class="row align-items-baseline">
                     <h6 class="card-subtitle mb-3 text-muted">Team:</h6>
-                    <p class="card-text" style="margin-left: 6px">Front-End React</p>
+                    <p class="card-text" style={{marginLeft: '6px'}}>Front-End React</p>
                   </div>
                 </div>
               </div>
@@ -173,7 +173,7 @@ class BaoCao extends Component {
                 <div class="tab-content mt-3" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="card">
-                      <div class="card-body" style="overflow-y: scroll">
+                      <div class="card-body" style={{overflowY: 'scroll'}}>
                         <div class="row">
                           <div class="col-md-4">
                             <div class="d-flex align-items-center ml-1">

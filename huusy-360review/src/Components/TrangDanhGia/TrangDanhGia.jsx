@@ -55,7 +55,7 @@ class TrangDanhGia extends Component {
                           <span class="navbar-toggler-bar bar3"></span>
                         </button>
                       </div>
-                      <a class="navbar-brand font-weight-bold text-danger" href="javascript:;">360 Evaluation System</a>
+                      <a class="navbar-brand font-weight-bold text-danger" href="">360 Evaluation System</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                       aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,7 +114,7 @@ class TrangDanhGia extends Component {
               <h4 class="card-title font-weight-bold">Thông tin</h4>
               {/* <!-- Select box --> */}
               <div class="form-group col-md-12 mb-4">
-                <label class="title" style="font-size: 1em" for="inputState">
+                <label class="title" style={{fontSize:' 1em'}} for="inputState">
                     Chọn người cần đánh giá (Bản thân hoặc người khác)
                   </label>
                 <select id="inputState" class="form-control">
@@ -134,15 +134,15 @@ class TrangDanhGia extends Component {
                 <div class="col-md-9">
                   <div class="row align-items-baseline">
                     <h6 class="card-subtitle mb-3 text-muted">Tên:</h6>
-                    <p class="card-text" style="margin-left:6px">Sơn Tùng</p>
+                    <p class="card-text" style={{marginLeft: '6px'}}>Sơn Tùng</p>
                   </div>
                   <div class="row align-items-baseline">
                     <h6 class="card-subtitle mb-3 text-muted">Title:</h6>
-                    <p class="card-text" style="margin-left: 6px">Senior Software Engineer</p>
+                    <p class="card-text" style={{marginLeft: '6px'}}>Senior Software Engineer</p>
                   </div>
                   <div class="row align-items-baseline">
                     <h6 class="card-subtitle mb-3 text-muted">Team:</h6>
-                    <p class="card-text" style="margin-left: 6px">Node.js Back-end</p>
+                    <p class="card-text" style={{marginLeft: '6px'}}>Node.js Back-end</p>
                   </div>
                 </div>
               </div>
@@ -217,7 +217,7 @@ class TrangDanhGia extends Component {
                   {/* <!-- Comment TextArea --> */}
                   <div class="form-group">
                     <label class="h3 font-weight-bold" for="comment">Comments</label>
-                    <textarea class="form-control" id="comment" rows="10" style="max-height: 120px;"></textarea>
+                    <textarea class="form-control" id="comment" rows="10" style={{maxHeight: '120px'}}></textarea>
                   </div>
                   {/* <!-- Pagination --> */}
                   <nav class="mt-4" aria-label="Page navigation">
