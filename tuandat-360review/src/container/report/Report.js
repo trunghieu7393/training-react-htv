@@ -3,7 +3,6 @@ import Table from '../../components/ReportDetail/Table.js';
 
 const Report = () => (
     <Table />
-
 )
 
 

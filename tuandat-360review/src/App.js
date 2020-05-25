@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import Layout from './components/layout/Layout.js';
 import SideMenu from './components/menu/SideMenu.js';
@@ -9,15 +9,13 @@ import Report from './container/report/Report.js';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <div className="wrapper">
-          <Layout>
-          <SideMenu />
-            <EvaluationForm />
-            <Report />
-          </Layout>
-        </div>
-      </BrowserRouter>
+      <div className="wrapper">
+        <SideMenu />
+        <Layout>
+          <Route path="/evaluation" component={EvaluationForm} />
+          <Route path="/report" component={Report} />
+        </Layout>
+      </div>
     );
 
   }

@@ -59,7 +59,7 @@ class Table extends Component {
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
-                                    <td>Lung Thị Linh</td>
+                                    <td>Nguyễn Thị Linh Chi</td>
                                     <td>5/5</td>
                                     <td>
                                         <button type="button" class="btn btn-outline-info btn-round">Xem</button>

@@ -12,7 +12,6 @@ class EvaluationForm extends Component {
                 <UserInformation />
                 {/* <!-- Bảng đánh giá --> */}
                 <EvaluationTable />
-
             </div>
         )
     }
