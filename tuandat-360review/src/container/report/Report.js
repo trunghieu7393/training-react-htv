@@ -5,5 +5,4 @@ const Report = () => (
   <Table />
 )
 
-
 export default Report;

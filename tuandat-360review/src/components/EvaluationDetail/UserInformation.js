@@ -12,7 +12,7 @@ class UserInformation extends Component {
           <h4 className="card-title font-weight-bold">{t('evaluation.information.title')}</h4>
           {/* <!-- Select box --> */}
           <div className="form-group col-md-12 mb-4">
-            <label className="title" style={{ fontSize: "1em" }} for="inputState">
+            <label className="title" style={{ fontSize: "1em" }} For="inputState">
               {t('evaluation.information.label')}
             </label>
             <select id="inputState" className="form-control">
@@ -26,7 +26,7 @@ class UserInformation extends Component {
           <div className="row mb-3">
             <div className="col-md-3">
               <div className="logo-image-small">
-                <img src="./assets/img/default-avatar.png" />
+                <img src="./assets/img/default-avatar.png" alt="Avatar"/>
               </div>
             </div>
             <div className="col-md-9">

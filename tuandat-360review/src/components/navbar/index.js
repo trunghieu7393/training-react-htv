@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 
+import Search from './search/';
 
 class NavMenu extends Component {
   render() {
@@ -26,19 +27,9 @@ class NavMenu extends Component {
             <span className="navbar-toggler-bar navbar-kebab"></span>
           </button>
           <div className="collapse navbar-collapse justify-content-end" id="navigation">
-            {/* <!-- Search Bar --> */}
-            <div>
-              <div className="input-group no-border">
-                <input type="text" value="1" className="form-control" placeholder="Search..." readOnly />
-                <div className="input-group-append">
-                  <div className="input-group-text">
-                    <i className="nc-icon nc-zoom-split"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* <!-- End of search bar --> */}
-            {/* <!-- User menu --> */}
+            {/* Search Bar */}
+            <Search />
+            {/* User menu */}
             <ul className="navbar-nav">
               {/* <!-- Notifications --> */}
               <li className="nav-item">
@@ -67,7 +58,7 @@ class NavMenu extends Component {
                 <button onClick={() => i18n.changeLanguage('en')} type="button" class="btn btn-primary btn-sm">EN</button>
               </li>
             </ul>
-            {/* <!-- End of user menu --> */}
+            {/* End of user menu */}
           </div>
         </div>
       </nav>

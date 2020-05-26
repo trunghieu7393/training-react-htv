@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch, Redirect } from 'react-router-dom';
 import EvaluationForm from '../../container/form/EvaluationForm.js';
 import Report from '../../container/report/Report.js';
 
@@ -16,7 +16,7 @@ class Menu extends Component {
         <div className="logo">
           <a href="#" className="logo-normal">
             <div className="logo-image-small">
-              <img src="/assets/img/hybrid-logo.jpg" />
+              <img src="/assets/img/hybrid-logo.jpg" alt="Logo" />
             </div>
           </a>
         </div>
@@ -28,7 +28,6 @@ class Menu extends Component {
                 <i className="nc-icon nc-bulb-63"></i>
                 <p>{t('menu.evaluate')}</p>
               </Link>
-
             </li>
             <li>
               <a href="#">
@@ -53,6 +52,7 @@ class Menu extends Component {
         <Switch>
           <Route path="/evaluation" exact component={EvaluationForm} />
           <Route path="/report" component={Report} />
+          <Redirect from="/" to="/evaluation" />
         </Switch>
       </div>
     )
