@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Table from '../Atoms/Table'
 import '../../styles.css';
 import {withTranslation} from 'react-i18next';
 
@@ -46,7 +46,7 @@ class BaoCao extends Component {
                 </div>
               </div>
               {/* <!-- Table detail --> */}
-              <div class="row">
+              {/* <div class="row">
                 <div class="col-md-5">
                   <table class="table table-bordered">
                     <thead class="text-center">
@@ -71,7 +71,16 @@ class BaoCao extends Component {
                     </tbody>
                   </table>
                 </div>
+              </div> */}
+              <div class="row">
+                <div class="col-md-5">
+                <Table
+                    table_scope={['TIÊU CHÍ','ĐIỂM TRUNG BÌNH']}
+                    table_scope_content={[['Năng lực','3/5'],['Thái độ','4/5'],['Teamwork','5/5']]}
+                    />
+                </div>
               </div>
+              
               {/* <!-- Tab Nav Form --> */}
               <div class="container-fluid mb-5">
                 <nav class="mt-4">
