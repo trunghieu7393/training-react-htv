@@ -1,43 +1,43 @@
 export default [
     {
-        label: 'Báo cáo',
-        url:'BaoCao'
+        label:'BaoCao',
+        url:'/BaoCao'
     },
     {
-        label: 'Báo cáo chi tiết',
+        label: 'BaoCaoChiTiet',
         url:'/BaoCaoChiTiet'
     },
     {
-        label:'Câu hỏi',
-        url:'CauHoi'
+        label:'CauHoi',
+        url:'/CauHoi'
     },
     {
-        label: 'Đăng nhập',
-        url:'DangNhap'
+        label: 'DangNhap',
+        url:'/DangNhap'
     },
     {
-        label: 'Đánh giá mentor',
+        label: 'DanhGiaMentor',
         url:'/DanhGiaMentor'
     },
     {
-        label:'Danh mục',
-        url:'DanhMuc'
+        label:'DanhMuc',
+        url:'/DanhMuc'
     },
     {
-        label:'Review câu hỏi',
-        url:'ReviewCauHoi'
+        label:'ReviewCauHoi',
+        url:'/ReviewCauHoi'
     },
     {
-        label: 'Sửa câu hỏi',
-        url:'SuaCauHoi'
+        label: 'SuaCauHoi',
+        url:'/SuaCauHoi'
     },
     {
-        label: 'Tất cả câu hỏi',
+        label: 'TatCaCauHoi',
         url:'/TatCaCauHoi'
     },
     {
-        label:'Trang đánh giá',
-        url:'TrangDanhGia'
+        label:'TrangDanhGia',
+        url:'/TrangDanhGia'
     }
 ]
 
