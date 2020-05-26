@@ -5,16 +5,16 @@ import UserInformation from '../../components/EvaluationDetail/UserInformation.j
 import EvaluationTable from '../../components/EvaluationDetail/EvaluationTable.js';
 
 class EvaluationForm extends Component {
-    render() {
-        return (
-            <div className="row">
-                {/* <!-- Thông tin người đánh giá --> */}
-                <UserInformation />
-                {/* <!-- Bảng đánh giá --> */}
-                <EvaluationTable />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="row">
+        {/* <!-- Thông tin người đánh giá --> */}
+        <UserInformation />
+        {/* <!-- Bảng đánh giá --> */}
+        <EvaluationTable />
+      </div>
+    )
+  }
 }
 
 export default EvaluationForm;

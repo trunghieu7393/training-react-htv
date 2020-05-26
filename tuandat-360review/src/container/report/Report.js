@@ -1,8 +1,8 @@
 import React from 'react';
-import Table from '../../components/ReportDetail/Table.js';
+import Table from '../../components/ReportDetail/';
 
 const Report = () => (
-    <Table />
+  <Table />
 )
 
 

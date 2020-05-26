@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-import Layout from './components/layout/Layout.js';
-import SideMenu from './components/menu/SideMenu.js';
+import Layout from './components/layout/';
+import SideMenu from './components/menu/';
 import EvaluationForm from './container/form/EvaluationForm.js';
 import Report from './container/report/Report.js';
 
