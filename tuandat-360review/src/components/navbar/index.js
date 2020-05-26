@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
+
 
 class NavMenu extends Component {
   render() {
+    const { t, i18n } = this.props;
+
     return (
       <nav className="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
         <div className="container-fluid">
@@ -42,7 +46,7 @@ class NavMenu extends Component {
                   <i className="nc-icon nc-bell-55"></i>
                 </a>
               </li>
-
+              {/* User Items */}
               <li className="nav-item btn-rotate dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
@@ -52,10 +56,15 @@ class NavMenu extends Component {
                   </p>
                 </a>
                 <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a className="dropdown-item" href="#">Profile</a>
-                  <a className="dropdown-item" href="#">Settings</a>
-                  <a className="dropdown-item" href="#">Log out</a>
+                  <a className="dropdown-item" href="#">{t('user_menu.profile')}</a>
+                  <a className="dropdown-item" href="#">{t('user_menu.setting')}</a>
+                  <a className="dropdown-item" href="#">{t('user_menu.logout')}</a>
                 </div>
+              </li>
+              {/* Change page language */}
+              <li>
+                <button onClick={() => i18n.changeLanguage('vn')} type="button" class="btn btn-default btn-sm">VN</button>
+                <button onClick={() => i18n.changeLanguage('en')} type="button" class="btn btn-primary btn-sm">EN</button>
               </li>
             </ul>
             {/* <!-- End of user menu --> */}
@@ -66,4 +75,4 @@ class NavMenu extends Component {
   }
 }
 
-export default NavMenu;
+export default withTranslation()(NavMenu);

@@ -1,0 +1,23 @@
+{
+  "menu": {
+    "evaluate": "Evaluate",
+    "question": "Question",
+    "assign": "Assign Evaluation",
+    "report": "Report"
+  },
+  "evaluation": {
+    "information": {
+      "title": "Information",
+      "label": "Choose person to evaluate (Self or another)",
+      "name": "NAME",
+      "position_title": "TITLE",
+      "team": "TEAM",
+      "btnConfirm": "Confirm"
+    }
+  },
+  "user_menu": {
+    "profile": "Profile",
+    "setting": "Settings",
+    "logout": "Log out"
+  }
+}
