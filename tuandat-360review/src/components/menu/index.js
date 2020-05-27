@@ -8,7 +8,7 @@ import { withTranslation } from 'react-i18next';
 
 class Menu extends Component {
   render() {
-    const { t, i18n } = this.props;
+    const { t } = this.props;
 
     return (
       <div className="sidebar" data-color="white" data-active-color="danger">
