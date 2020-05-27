@@ -16,15 +16,18 @@ import SuaCauHoi from './Components/SuaCauHoi';
 import TrangDanhGia from './Components/TrangDanhGia';
 import NavBar from './Components/MainPanel/NavBar';
 import Footer from './Components/MainPanel/Footer';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import './App.scss';
 import './styles.css';
+import { useTranslation, Trans } from 'react-i18next';
 
 class App extends Component {
 
 	render() {
 		
 		return (
-			
+			<Provider store={ store }>
 			<div className="app">
 				<BrowserRouter>
 					<Header/>
@@ -49,7 +52,7 @@ class App extends Component {
 				</BrowserRouter>
 
 			</div>
-			
+			</Provider>
 		)
 	}
 }

@@ -34,7 +34,7 @@ class DanhGiaMentor extends Component {
   //    return () => { ignore = true; }
   // }
   componentDidMount() {
-    console.log('haha')
+    
     axios.get("http://localhost:3001/users")
       .then(response => {
         console.log(response)

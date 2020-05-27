@@ -4,15 +4,17 @@ import './Header.scss';
 import HeaderData from './HeaderData/HeaderData';
 import HeaderItem from './HeaderItem';
 import {withTranslation} from 'react-i18next';
-
+import { useTranslation, Trans } from 'react-i18next';
+import {createRedux,readRedux,updateRedux,deleteRedux} from '../../redux/actions/testSagas';
+import {connect} from 'react-redux';
 class Header extends Component {
+  
   handleClick= lng => {
     const {i18n} = this.props;
     i18n.changeLanguage(lng);
   }
   render() {
-    const {t} = this.props;
-    console.log('t',t)
+    
     return (
       <div class="sidebar header-fixed" data-color="white" data-active-color="danger">
 
@@ -43,4 +45,5 @@ class Header extends Component {
     )
   }
 }
-export default withTranslation()(Header);
+// export default withTranslation('common') connect(null,{createRedux,readRedux,updateRedux,deleteRedux})(Header);
+export default connect(null,{createRedux,readRedux,updateRedux,deleteRedux})(Header);

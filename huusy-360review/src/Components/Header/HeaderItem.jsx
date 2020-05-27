@@ -13,4 +13,4 @@ class HeaderItem extends Component {
         )
     }
 }
-export default withTranslation()(HeaderItem);
+export default withTranslation('common')(HeaderItem);
