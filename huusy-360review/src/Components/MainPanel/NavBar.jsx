@@ -3,13 +3,12 @@ import './MainPanel.scss';
 import '../../styles.css';
 import { withTranslation } from 'react-i18next';
 import { useTranslation, Trans } from 'react-i18next';
-import {createRedux,readRedux,updateRedux,deleteRedux} from '../../redux/actions/testSagas';
+import * as tesaga from '../../redux/actions/testSagas';
 import {connect} from 'react-redux';
 class NavBar extends Component {
   componentDidMount=()=>{
     const {createRedux, readRedux, updateRedux, deleteRedux} =this.props;
     createRedux('create');
-    readRedux('read');
  }
   handleClick = lng => {
     const { i18n } = this.props;
@@ -84,9 +83,7 @@ class NavBar extends Component {
   }
 }
 
-
-
 // export default withTranslation('common')(NavBar);
-export default withTranslation('common')(connect(null,{createRedux,readRedux,updateRedux,deleteRedux})(NavBar));
+export default withTranslation('common')(connect(null, {...tesaga})(NavBar));
 
 // export default connect(null,{createRedux,readRedux,updateRedux,deleteRedux})(NavBar);

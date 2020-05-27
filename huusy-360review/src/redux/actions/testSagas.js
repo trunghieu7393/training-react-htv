@@ -1,10 +1,10 @@
 import { CREATE_REDUX, READ_REDUX, UPDATE_REDUX, DELETE_REDUX } from '../type';
 
-export const createRedux = (data) => dispatch => {
-    dispatch({
+export const createRedux = (payload) => {
+    return {
         type: CREATE_REDUX,
-        payload: data
-    })
+        payload
+    }
 }
 export const readRedux = (data) => dispatch => {
     dispatch({

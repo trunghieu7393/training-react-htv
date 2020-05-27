@@ -17,11 +17,11 @@ import TrangDanhGia from './Components/TrangDanhGia';
 import NavBar from './Components/MainPanel/NavBar';
 import Footer from './Components/MainPanel/Footer';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import configureStore from './redux/store';
 import './App.scss';
 import './styles.css';
 import { useTranslation, Trans } from 'react-i18next';
-
+const store= configureStore();
 class App extends Component {
 
 	render() {
