@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from '../../components/ReportDetail/';
+import Table from '../../ReportDetail/';
 
 const Report = () => (
   <Table />

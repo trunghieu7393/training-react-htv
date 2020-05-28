@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Aux.js';
+import Aux from '../hoc/Aux.js'
 import NavMenu from '../navbar/index.js';
-import Footer from '../../container/footer'
+import Footer from '../container/footer/'
 
 
 class Layout extends Component {

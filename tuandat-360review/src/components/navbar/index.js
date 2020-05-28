@@ -54,8 +54,8 @@ class NavMenu extends Component {
               </li>
               {/* Change page language */}
               <li>
-                <button onClick={() => i18n.changeLanguage('vn')} type="button" class="btn btn-primary btn-sm">VN</button>
-                <button onClick={() => i18n.changeLanguage('en')} type="button" class="btn btn-default btn-sm">EN</button>
+                <button onClick={() => i18n.changeLanguage('vn')} type="button" className="btn btn-primary btn-sm">VN</button>
+                <button onClick={() => i18n.changeLanguage('en')} type="button" className="btn btn-default btn-sm">EN</button>
               </li>
             </ul>
             {/* End of user menu */}

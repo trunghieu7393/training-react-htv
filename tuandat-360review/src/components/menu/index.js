@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch, Redirect } from 'react-router-dom';
-import EvaluationForm from '../../container/form/EvaluationForm.js';
-import Report from '../../container/report/Report.js';
+import EvaluationForm from '../container/form/EvaluationForm.js';
+import Report from '../container/report/Report.js';
 
 //import Aux from '../../hoc/Aux.js'
 import { withTranslation } from 'react-i18next';
