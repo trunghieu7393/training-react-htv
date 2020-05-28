@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import '../../styles.css';
 import DanhGiaMentorItem from './DanhGiaMentorItem';
+import {getDatabase,postDatabase,putDatabase,deleteDatabase} from '../../common/actionAPI';
+import * as tesaga from '../../redux/actions/testSagas';
+import {connect} from 'react-redux';
 
 class DanhGiaMentor extends Component {
   constructor() {
@@ -34,16 +37,9 @@ class DanhGiaMentor extends Component {
   //    return () => { ignore = true; }
   // }
   componentDidMount() {
-    console.log('haha')
-    axios.get("http://localhost:3001/users")
-      .then(response => {
-        console.log(response)
-        console.log(response.data)
-
-
-        this.setState({ data: response.data });
-      })
-      .catch(err => console.log(err));
+    const {createRedux}=this.props;
+    createRedux()
+    
   }
   handleChange=(e)=> {
     const {datathemchidinh}= this.state;
@@ -51,25 +47,25 @@ class DanhGiaMentor extends Component {
     this.setState({datathemchidinh})
   }
   postDatabase=()=> {
-    const {datathemchidinh} = this.state;
-    axios.post('http://localhost:3001/users', {
-      nguoidanhgia:`huusy`,
-      nguoiduocdanhgia: `trandat`,
-      thoihan: `trang`
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    const {createRedux}=this.props;
+    createRedux()
+  //  postDatabase('http://localhost:3001/users')
+   const {dataFromAPI} = this.props;
+    if (!!dataFromAPI) {
+      this.setState({data:dataFromAPI})
+      console.log('setState ok')
+    }
   }
-
+  
 
   render() {
-    const { data, datathemchidinh } = this.state;
-    console.log('data', data);
-    console.log('datathemchidinh', datathemchidinh);
+    const {data}=this.state;
+    const {dataFromAPI}=this.props;
+    console.log('data',data)
+    console.log('dataFromAPI',dataFromAPI)
+  // dataFromAPI.map((item,idx)=> {
+  //     console.log('item',item)
+  //   })
     return (
       <div class="">
         <div class="wrapper ">
@@ -223,5 +219,8 @@ class DanhGiaMentor extends Component {
     )
   }
 }
-
-export default DanhGiaMentor;
+const mapStateToProps=state => ({
+  dataFromAPI: state.api.data
+})
+// export default DanhGiaMentor;
+export default connect(mapStateToProps,{...tesaga})(DanhGiaMentor);

@@ -1,13 +1,15 @@
-{
-    "title": "List",
-    "BaoCao":"Report",
-    "BaoCaoChiTiet":"Detail report",
-    "CauHoi":"Question",
-    "DangNhap":"Login",
-    "DanhGiaMentor":"Mentor survey",
-    "DanhMuc":"Survey",
-    "ReviewCauHoi":"Question review",
-    "SuaCauHoi":"Edit question",
-    "TatCaCauHoi":"All question",
-    "TrangDanhGia":"Evolution Page"    
-  }
+// {
+//     "title": "List",
+//     "BaoCao":"Report",
+//     "BaoCaoChiTiet":"Detail report",
+//     "CauHoi":"Question",
+//     "DangNhap":"Login",
+//     "DanhGiaMentor":"Mentor survey",
+//     "DanhMuc":"Survey",
+//     "ReviewCauHoi":"Question review",
+//     "SuaCauHoi":"Edit question",
+//     "TatCaCauHoi":"All question",
+//     "TrangDanhGia":"Evolution Page"
+
+   
+//   }

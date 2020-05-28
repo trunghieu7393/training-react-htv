@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-
+import * as tesaga from '../../redux/actions/testSagas';
+import {connect} from 'react-redux';
 import '../../styles.css';
 
 class TatCaCauHoi extends Component {
-    render() {
+  componentDidMount() {
+    const {createRedux}=this.props;
+    createRedux()
+  }  
+  render() {
         return (
             <div class="">
             <div class="wrapper ">
@@ -137,4 +142,4 @@ class TatCaCauHoi extends Component {
     }
 }
 
-export default TatCaCauHoi;
+export default connect(null,{...tesaga})(TatCaCauHoi);

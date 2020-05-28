@@ -4,10 +4,7 @@ import '../../styles.css';
 import {withTranslation} from 'react-i18next';
 
 class Footer extends Component {
-  handleClick= lng => {
-    const {i18n} = this.props;
-    i18n.changeLanguage(lng);
-  }  
+  
   render() {
         return (
             <footer class="footer footer-fixed" style={{position: 'absolute'}, {width: '-webkit-fill-available'}}>
@@ -34,4 +31,4 @@ class Footer extends Component {
     }
 }
 
-export default withTranslation()(Footer);
+export default Footer;

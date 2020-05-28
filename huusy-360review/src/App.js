@@ -16,19 +16,25 @@ import SuaCauHoi from './Components/SuaCauHoi';
 import TrangDanhGia from './Components/TrangDanhGia';
 import NavBar from './Components/MainPanel/NavBar';
 import Footer from './Components/MainPanel/Footer';
+import { Provider } from 'react-redux';
+// import configureStore from './redux/store';
+import store from './redux/store';
 import './App.scss';
 import './styles.css';
-
+import GlobalLoading from '../src/Components/GlobalLoading';
+import { useTranslation, Trans } from 'react-i18next';
+// const store= configureStore();
 class App extends Component {
 
 	render() {
 		
 		return (
-			
+			<Provider store={ store }>
 			<div className="app">
 				<BrowserRouter>
 					<Header/>
 					<NavBar/>
+					<GlobalLoading/>
 					<Footer/>
 					{/* <button onClick={() => changeLanguage('de')}>de</button>
 					<button onClick={() => changeLanguage('en')}>en</button> */}
@@ -49,7 +55,7 @@ class App extends Component {
 				</BrowserRouter>
 
 			</div>
-			
+			</Provider>
 		)
 	}
 }

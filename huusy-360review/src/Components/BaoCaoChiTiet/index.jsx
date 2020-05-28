@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import Table from '../Atoms/Table'
+import Table from '../Atoms/Table';
+import Tab from '../Molecules/Tab';
 import '../../styles.css';
 import {withTranslation} from 'react-i18next';
-
-class BaoCao extends Component {
+import * as tesaga from '../../redux/actions/testSagas';
+import {connect} from 'react-redux';
+class BaoCaoChiTiet extends Component {
+  componentDidMount() {
+    const {createRedux}=this.props;
+    createRedux()
+  }
   handleClick= lng => {
     const {i18n} = this.props;
     i18n.changeLanguage(lng);
@@ -75,14 +81,14 @@ class BaoCao extends Component {
               <div class="row">
                 <div class="col-md-5">
                 <Table
-                    table_scope={['TIÊU CHÍ','ĐIỂM TRUNG BÌNH']}
-                    table_scope_content={[['Năng lực','3/5'],['Thái độ','4/5'],['Teamwork','5/5']]}
+                    tableScope={['TIÊU CHÍ','ĐIỂM TRUNG BÌNH']}
+                    tableScopeContent={[['Năng lực','3/5'],['Thái độ','4/5'],['Teamwork','5/5']]}
                     />
                 </div>
               </div>
               
               {/* <!-- Tab Nav Form --> */}
-              <div class="container-fluid mb-5">
+              {/* <div class="container-fluid mb-5">
                 <nav class="mt-4">
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
@@ -94,7 +100,7 @@ class BaoCao extends Component {
                   </div>
                 </nav>
                 {/* <!-- Content --> */}
-                <div class="tab-content mt-3" id="nav-tabContent">
+                {/* <div class="tab-content mt-3" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="card">
                       <div class="card-body" style={{overflowY: 'scroll'}}>
@@ -208,7 +214,8 @@ class BaoCao extends Component {
                     exercitation irure Lorem incididunt nostrud.
                   </div>
                 </div>
-              </div>
+              </div> */}
+              <Tab/>
               {/* <!-- End of Tab -->
               <!-- Button --> */}
               <button type="button" class="btn btn-default btn-round pull-right">Quay lại</button>
@@ -232,4 +239,4 @@ class BaoCao extends Component {
     }
 }
 
-export default withTranslation()(BaoCao);
+export default connect(null,{...tesaga})(BaoCaoChiTiet);

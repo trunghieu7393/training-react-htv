@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class TableWithButton extends Component {
     render() {
-        const { table_scope, table_scope_content } = this.props;
+        const { tableScope, tableScopeContent } = this.props;
         return (
             <table class="table table-bordered">
                 <thead class="thead-dark">
@@ -11,7 +11,7 @@ class TableWithButton extends Component {
                           <th scope="col">Tên người dùng</th>
                           <th scope="col">Điểm đánh giá</th>
                           <th scope="col">Thao tác</th> */}
-                        {table_scope.map((item, idx) =>
+                        {tableScope.map((item, idx) =>
                             <th scope="col" key={idx}>{item}</th>
                         )}
                         <th scope="col">Thao tác</th>
@@ -19,7 +19,7 @@ class TableWithButton extends Component {
                 </thead>
 
                 <tbody class="text-center">
-                    {table_scope_content.map((item, idx) =>
+                    {tableScopeContent.map((item, idx) =>
 
                         <tr key={idx}>
                             {

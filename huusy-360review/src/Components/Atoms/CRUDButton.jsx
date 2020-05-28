@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 
 class CRUDButton extends Component {
+    onSubmit = (event) => {
+        event()
+    }
     render() {
-        const {feature}=this.props;
+        const {feature, event}=this.props;
         return (
-            <button type="button" class="btn btn-outline-info btn-round">Xem</button>
+            <button onClick={() => this.onSubmit(event)} type="button" class="btn btn-outline-info btn-round">Xem</button>
         )
     }
 }

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class SelectBox extends Component {
     render() {
-        const {label, option_content}=this.props;
+        const {label, optionContent}=this.props;
         return (
             <div class="form-group mb-4">
                 <label class="title" style={{fontSize: '1em'}} for="inputState">
@@ -11,7 +11,7 @@ class SelectBox extends Component {
                 </label>
                 <select id="inputState" class="form-control">
                   <option selected disabled>Lựa chọn</option>
-                  {option_content.map((item,key)=> 
+                  {optionContent.map((item,key)=> 
                     <option value="1">{item}</option>
                   )}
                   {/* <option value="1">Team Front-End</option>

@@ -3,7 +3,13 @@ import TableWithButton from '../Atoms/TableWithButton';
 import '../../styles.css';
 import SelectBox from '../Atoms/SelectBox';
 import Pagination from '../Atoms/Pagination';
+import * as tesaga from '../../redux/actions/testSagas';
+import {connect} from 'react-redux';
 class BaoCao extends Component {
+  componentDidMount() {
+    const {createRedux}=this.props;
+    createRedux()
+  }
   render() {
     return (
       <div class="">
@@ -26,12 +32,12 @@ class BaoCao extends Component {
                     
                     <SelectBox
                       label='TÌm kiếm lựa chọn theo team'
-                      option_content={['Team Front-End', 'Team PHP', 'Team Node.js', 'Team Back-End']}
+                      optionContent={['Team Front-End', 'Team PHP', 'Team Node.js', 'Team Back-End']}
                     />
                     {/* <!-- Table --> */}
                     <TableWithButton
-                    table_scope={['ID','Tên người dùng','Điểm đánh giá']}
-                    table_scope_content={[[1,'Văn An','3/5'],[2,'Văn B','4/5'],[3,'Văn C','5/5']]}
+                    tableScope={['ID','Tên người dùng','Điểm đánh giá']}
+                    tableScopeContent={[[1,'Văn An','3/5'],[2,'Văn B','4/5'],[3,'Văn C','5/5']]}
                     />
                     
                     {/* <!-- Pagination Start--> */}
@@ -56,4 +62,5 @@ class BaoCao extends Component {
   }
 }
 
-export default BaoCao;
+
+export default connect(null,{...tesaga})(BaoCao);
