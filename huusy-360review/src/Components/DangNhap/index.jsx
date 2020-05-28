@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-
+import * as tesaga from '../../redux/actions/testSagas';
+import {connect} from 'react-redux';
 import '../../styles.css';
 import './DangNhap.scss';
 class DangNhap extends Component {
+    componentDidMount() {
+        const {createRedux}=this.props;
+        createRedux()
+      }
     render() {
         return (
             <div class="bg-primary login-background">
@@ -41,4 +46,4 @@ class DangNhap extends Component {
     }
 }
 
-export default DangNhap;
+export default connect(null,{...tesaga})(DangNhap);

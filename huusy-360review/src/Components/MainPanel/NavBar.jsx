@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 class NavBar extends Component {
   componentDidMount=()=>{
     const {createRedux, readRedux, updateRedux, deleteRedux} =this.props;
-    createRedux('create');
+   
  }
   handleClick = lng => {
     const { i18n } = this.props;

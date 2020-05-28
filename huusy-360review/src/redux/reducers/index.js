@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
-import testReducer from './testReducer';
 import sagasReducer from './sagasReducer';
+import ui from './ui';
+import api from './api'
 export default combineReducers({
-  test: testReducer,
-  sagasReducer
+  
+  sagasReducer,
+  api,
+  ui
 });

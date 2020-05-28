@@ -3,8 +3,13 @@ import TableWithButton from '../Atoms/TableWithButton';
 import '../../styles.css';
 import SelectBox from '../Atoms/SelectBox';
 import Pagination from '../Atoms/Pagination';
-
+import * as tesaga from '../../redux/actions/testSagas';
+import {connect} from 'react-redux';
 class BaoCao extends Component {
+  componentDidMount() {
+    const {createRedux}=this.props;
+    createRedux()
+  }
   render() {
     return (
       <div class="">
@@ -57,4 +62,5 @@ class BaoCao extends Component {
   }
 }
 
-export default BaoCao;
+
+export default connect(null,{...tesaga})(BaoCao);

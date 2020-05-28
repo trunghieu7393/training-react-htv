@@ -3,8 +3,13 @@ import Table from '../Atoms/Table';
 import Tab from '../Molecules/Tab';
 import '../../styles.css';
 import {withTranslation} from 'react-i18next';
-
-class BaoCao extends Component {
+import * as tesaga from '../../redux/actions/testSagas';
+import {connect} from 'react-redux';
+class BaoCaoChiTiet extends Component {
+  componentDidMount() {
+    const {createRedux}=this.props;
+    createRedux()
+  }
   handleClick= lng => {
     const {i18n} = this.props;
     i18n.changeLanguage(lng);
@@ -234,4 +239,4 @@ class BaoCao extends Component {
     }
 }
 
-export default withTranslation()(BaoCao);
+export default connect(null,{...tesaga})(BaoCaoChiTiet);

@@ -1,4 +1,4 @@
-import { CREATE_REDUX, READ_REDUX, UPDATE_REDUX, DELETE_REDUX } from '../type';
+import { CREATE_REDUX, READ_REDUX, UPDATE_REDUX, DELETE_REDUX, } from '../type';
 
 const initialState = {
 
@@ -26,6 +26,7 @@ export default function (state = initialState, action) {
                 ...state,
                 data: action.payload
             }
+        
         default:
             return state;
     }

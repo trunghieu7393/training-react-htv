@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-
+import * as tesaga from '../../redux/actions/testSagas';
+import {connect} from 'react-redux';
 import '../../styles.css';
 
 class SuaCauHoi extends Component {
+    componentDidMount() {
+        const {createRedux}=this.props;
+        createRedux()
+      }
     render() {
         return (
             <div class="">
@@ -93,4 +98,4 @@ class SuaCauHoi extends Component {
     }
 }
 
-export default SuaCauHoi;
+export default connect(null,{...tesaga})(SuaCauHoi);
