@@ -1,0 +1,23 @@
+{
+  "menu": {
+    "evaluate": "Đánh giá",
+    "question": "Câu hỏi",
+    "assign": "Phân công đánh giá",
+    "report": "Báo cáo"
+  },
+  "evaluation": {
+    "information": {
+      "title": "Thông tin",
+      "label": "Chọn người cần đánh giá (Bản thân hoặc người khác)",
+      "name": "TÊN",
+      "position_title": "CHỨC VỤ",
+      "team": "NHÓM",
+      "btnConfirm": "Xác nhận"
+    }
+  },
+  "user_menu": {
+    "profile": "Thông tin cá nhân",
+    "setting": "Cài đặt",
+    "logout": "Đăng xuất"
+  }
+}
