@@ -2,57 +2,57 @@ import React, { Component } from 'react';
 import Table from '../Atoms/Table';
 import Tab from '../Molecules/Tab';
 import '../../styles.css';
-import {withTranslation} from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import * as tesaga from '../../redux/actions/testSagas';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 class BaoCaoChiTiet extends Component {
   componentDidMount() {
-    const {createRedux}=this.props;
+    const { createRedux } = this.props;
     createRedux()
   }
-  handleClick= lng => {
-    const {i18n} = this.props;
+  handleClick = lng => {
+    const { i18n } = this.props;
     i18n.changeLanguage(lng);
-  }  
+  }
   render() {
-        return (
-            <div class="">
-            <div class="wrapper ">
-              
-              
-             {/* Main panel */}
-              <div class="main-panel main-panel-height" >
-          
-                
-               
-          {/* main content */}
-          <div class="content">
-        <div class="row">
-          {/* <!-- Information Section --> */}
-          <div class="col-md-12 card">
-            {/* <!-- <h3 class="description">Your content here</h3> --> */}
-            <h4 class="ml-3 mb-3 font-weight-bold">Báo cáo chi tiết</h4>
-            <div class="card-body">
-              {/* <!-- Show information --> */}
-              <div class="row mb-3">
-                <div class="col-md-3">
-                  <div class="logo-image-small">
-                    <img src="./assets/img/default-avatar.png"/>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <div class="row align-items-baseline">
-                    <h6 class="card-subtitle mb-3 text-muted">Tên:</h6>
-                    <p class="card-text" style={{marginLeft: '6px'}}>Trần Tuấn Đạt</p>
-                  </div>
-                  <div class="row align-items-baseline">
-                    <h6 class="card-subtitle mb-3 text-muted">Team:</h6>
-                    <p class="card-text" style={{marginLeft: '6px'}}>Front-End React</p>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- Table detail --> */}
-              {/* <div class="row">
+    return (
+      <div class="">
+        <div class="wrapper ">
+
+
+          {/* Main panel */}
+          <div class="main-panel main-panel-height" >
+
+
+
+            {/* main content */}
+            <div class="content">
+              <div class="row">
+                {/* <!-- Information Section --> */}
+                <div class="col-md-12 card">
+                  {/* <!-- <h3 class="description">Your content here</h3> --> */}
+                  <h4 class="ml-3 mb-3 font-weight-bold">Báo cáo chi tiết</h4>
+                  <div class="card-body">
+                    {/* <!-- Show information --> */}
+                    <div class="row mb-3">
+                      <div class="col-md-3">
+                        <div class="logo-image-small">
+                          <img src="./assets/img/default-avatar.png" />
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <div class="row align-items-baseline">
+                          <h6 class="card-subtitle mb-3 text-muted">Tên:</h6>
+                          <p class="card-text" style={{ marginLeft: '6px' }}>Trần Tuấn Đạt</p>
+                        </div>
+                        <div class="row align-items-baseline">
+                          <h6 class="card-subtitle mb-3 text-muted">Team:</h6>
+                          <p class="card-text" style={{ marginLeft: '6px' }}>Front-End React</p>
+                        </div>
+                      </div>
+                    </div>
+                    {/* <!-- Table detail --> */}
+                    {/* <div class="row">
                 <div class="col-md-5">
                   <table class="table table-bordered">
                     <thead class="text-center">
@@ -78,17 +78,17 @@ class BaoCaoChiTiet extends Component {
                   </table>
                 </div>
               </div> */}
-              <div class="row">
-                <div class="col-md-5">
-                <Table
-                    tableScope={['TIÊU CHÍ','ĐIỂM TRUNG BÌNH']}
-                    tableScopeContent={[['Năng lực','3/5'],['Thái độ','4/5'],['Teamwork','5/5']]}
-                    />
-                </div>
-              </div>
-              
-              {/* <!-- Tab Nav Form --> */}
-              {/* <div class="container-fluid mb-5">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <Table
+                          tableScope={['TIÊU CHÍ', 'ĐIỂM TRUNG BÌNH']}
+                          tableScopeContent={[['Năng lực', '3/5'], ['Thái độ', '4/5'], ['Teamwork', '5/5']]}
+                        />
+                      </div>
+                    </div>
+
+                    {/* <!-- Tab Nav Form --> */}
+                    {/* <div class="container-fluid mb-5">
                 <nav class="mt-4">
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
@@ -100,7 +100,7 @@ class BaoCaoChiTiet extends Component {
                   </div>
                 </nav>
                 {/* <!-- Content --> */}
-                {/* <div class="tab-content mt-3" id="nav-tabContent">
+                    {/* <div class="tab-content mt-3" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="card">
                       <div class="card-body" style={{overflowY: 'scroll'}}>
@@ -215,28 +215,28 @@ class BaoCaoChiTiet extends Component {
                   </div>
                 </div>
               </div> */}
-              <Tab/>
-              {/* <!-- End of Tab -->
+                    <Tab />
+                    {/* <!-- End of Tab -->
               <!-- Button --> */}
-              <button type="button" class="btn btn-default btn-round pull-right">Quay lại</button>
-            </div>
-          </div>
+                    <button type="button" class="btn btn-default btn-round pull-right">Quay lại</button>
+                  </div>
+                </div>
 
-          {/* <!-- End --> */}
-        </div>
-      </div>
-               {/* End */}
-                
-                
+                {/* <!-- End --> */}
               </div>
-              {/*--------------------------- End --------------------------------------*/}
             </div>
-      
-          
-           
+            {/* End */}
+
+
           </div>
-        )
-    }
+          {/*--------------------------- End --------------------------------------*/}
+        </div>
+
+
+
+      </div>
+    )
+  }
 }
 
-export default connect(null,{...tesaga})(BaoCaoChiTiet);
+export default connect(null, { ...tesaga })(BaoCaoChiTiet);

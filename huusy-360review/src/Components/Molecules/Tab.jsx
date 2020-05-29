@@ -4,7 +4,7 @@ class Tab extends Component {
   render() {
     const { table_scope, table_scope_content } = this.props;
     return (
-        <div class="container-fluid mb-5">
+      <div class="container-fluid mb-5">
         <nav class="mt-4">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
@@ -19,11 +19,11 @@ class Tab extends Component {
         <div class="tab-content mt-3" id="nav-tabContent">
           <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             <div class="card">
-              <div class="card-body" style={{overflowY: 'scroll'}}>
+              <div class="card-body" style={{ overflowY: 'scroll' }}>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="d-flex align-items-center ml-1">
-                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar"/>
+                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar" />
                       <div class="ml-3">
                         <div class="card-text color-custom">
                           <b>
@@ -38,7 +38,7 @@ class Tab extends Component {
                   </div>
                   <div class="col-md-4">
                     <div class="d-flex align-items-center ml-1">
-                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar"/>
+                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar" />
                       <div class="ml-3">
                         <div class="card-text color-custom">
                           <b>
@@ -53,7 +53,7 @@ class Tab extends Component {
                   </div>
                   <div class="col-md-4">
                     <div class="d-flex align-items-center ml-1">
-                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar"/>
+                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar" />
                       <div class="ml-3">
                         <div class="card-text color-custom">
                           <b>
@@ -68,7 +68,7 @@ class Tab extends Component {
                   </div>
                   <div class="col-md-4">
                     <div class="d-flex align-items-center ml-1">
-                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar"/>
+                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar" />
                       <div class="ml-3">
                         <div class="card-text color-custom">
                           <b>
@@ -83,7 +83,7 @@ class Tab extends Component {
                   </div>
                   <div class="col-md-4">
                     <div class="d-flex align-items-center ml-1">
-                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar"/>
+                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar" />
                       <div class="ml-3">
                         <div class="card-text color-custom">
                           <b>
@@ -98,7 +98,7 @@ class Tab extends Component {
                   </div>
                   <div class="col-md-4">
                     <div class="d-flex align-items-center ml-1">
-                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar"/>
+                      <img class="avatar border-gray" src=" ./assets/img/mike.jpg" alt="Avatar" />
                       <div class="ml-3">
                         <div class="card-text color-custom">
                           <b>

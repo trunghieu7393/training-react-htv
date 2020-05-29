@@ -8,13 +8,13 @@ const reducer =(state=inititalState,action)=> {
     switch (action.type){
         case SHOW_LOADING: {
             return {
-                ...state,
+                // ...state,
                 showLoading:true,
             }
         }
         case HIDE_LOADING: {
             return {
-                ...state,
+                // ...state,
                 showLoading:false,
             }
         }

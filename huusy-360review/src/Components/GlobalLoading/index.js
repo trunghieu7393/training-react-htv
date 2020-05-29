@@ -10,20 +10,22 @@ class GlobalLoading extends Component {
 	render() {
 		const { label, url, t } = this.props;
 		const { classes, showLoading } = this.props;
-		let xhtml = null;
-		if (showLoading) {
-			xhtml = (
-				<div className={classes.globalLoading}>
-					<img src={LoadingIcon} alt="loading" className={classes.icon} />
-				</div>
-			);
-		}
-		// return (
-		// 	<div className={classes.globalLoading}>
-		// 		<img src={LoadingIcon} alt="loading" className={classes.icon}/>
-		// 	</div>
-		// );
-		return xhtml;
+		// let xhtml = null;
+		// if (showLoading) {
+		// 	xhtml = (
+		// 		<div className={classes.globalLoading}>
+		// 			<img src={LoadingIcon} alt="loading" className={classes.icon} />
+		// 		</div>
+		// 	);
+		// }
+
+		// return xhtml;
+		if (!showLoading) return null
+		return (
+			<div className={classes.globalLoading}>
+				<img src={LoadingIcon} alt="loading" className={classes.icon} />
+			</div>
+		)
 	}
 }
 

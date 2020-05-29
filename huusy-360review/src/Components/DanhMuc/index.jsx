@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import * as tesaga from '../../redux/actions/testSagas';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import './DanhMuc.scss';
 import '../../styles.css';
 
 class DanhMuc extends Component {
   componentDidMount() {
-    const {createRedux}=this.props;
+    const { createRedux } = this.props;
     createRedux()
   }
   render() {
@@ -14,11 +14,11 @@ class DanhMuc extends Component {
       <div class="">
         <div class="wrapper ">
           {/* header */}
-          
+
           {/* End header */}
           <div class="main-panel main-panel-height" >
 
-            
+
 
             <div class="content">
               <div class="row">
@@ -99,7 +99,7 @@ class DanhMuc extends Component {
               </div>
             </div>
 
-            
+
 
           </div>
 
@@ -112,4 +112,4 @@ class DanhMuc extends Component {
   }
 }
 
-export default connect(null,{...tesaga})(DanhMuc);
+export default connect(null, { ...tesaga })(DanhMuc);

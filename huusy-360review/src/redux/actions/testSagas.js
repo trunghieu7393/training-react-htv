@@ -6,11 +6,11 @@ import { CREATE_REDUX, READ_REDUX, UPDATE_REDUX, DELETE_REDUX, POST_DATA_API_SUC
 //         payload
 //     }
 // }
-export const createRedux = (data) => dispatch => {
-    dispatch({
+export const createRedux = (payload)=> {
+    return{
       type: CREATE_REDUX,
-      payload: data
-    })
+      payload
+    }
   }
 export const readRedux = (payload) => {
     return {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import * as action from '../redux/actions/testSagas';
 import DanhGiaMentor from '../Components/DanhGiaMentor';
 export const putDatabase = (curentUrl) => {
@@ -43,23 +43,23 @@ export const postDatabase = (curentUrl) => {
 //     // axios.get(curentUrl)
 //     //     .then(response => {
 //     //         console.log(response)
-            
+
 //     //         // this.setState({ data: response.data });
 //     //     })
 //     //     .catch(err => console.log(err));
-    
+
 //     axios({
 //         method:'GET',
 //         url:'http://localhost:3001/users',
 //         data:null
 //     }).then(res=>{
 //         console.log(res);
-        
+
 //     }).catch(err=>{
 //         console.log(err)
 //     })
-    
-    
+
+
 //     }
 // export async function getDatabase(){
 //     const data=await axios.get('http://localhost:3001/users')
@@ -73,14 +73,34 @@ export const postDatabase = (curentUrl) => {
 //     return data;
 //   }
 export const getDatabase = async () => {
-    var res = await axios.get("http://localhost:3001/users");
-    return res;
-    
+    const data = await axios.get('http://localhost:3001/users')
+        .then(function (res) {
+            //response là biến chứa toàn bộ thông tin user
+            console.log(res);
+            return PATTERN_DATA(res)
+        })
+        .catch(function (err) {
+
+            
+
+            console.log(err);
+            throw Error('loi ke cha tao')
+        });
+    return data;
+
 };
 
-export const STATUS_CODE={
-    SUCCESS:200,
-    CREATED:201,
-    UPDATED:202
+export const STATUS_CODE = {
+    SUCCESS: 200,
+    CREATED: 201,
+    UPDATED: 202
 };
+
+const PATTERN_DATA = (res) => {
+    return {
+        status: res.status || 404,
+        data: res.data,
+        error: res.error || null,
+    }
+}
 

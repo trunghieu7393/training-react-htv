@@ -1,7 +1,7 @@
 import {  POST_DATA_API_SUCCESS, POST_DATA_API_FAIL } from '../type';
 
 const initialState = {
-
+data:[]
 }
 
 export default function (state = initialState, action) {

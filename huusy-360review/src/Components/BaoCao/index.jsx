@@ -4,10 +4,10 @@ import '../../styles.css';
 import SelectBox from '../Atoms/SelectBox';
 import Pagination from '../Atoms/Pagination';
 import * as tesaga from '../../redux/actions/testSagas';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 class BaoCao extends Component {
   componentDidMount() {
-    const {createRedux}=this.props;
+    const { createRedux } = this.props;
     createRedux()
   }
   render() {
@@ -15,11 +15,11 @@ class BaoCao extends Component {
       <div class="">
         <div class="wrapper ">
 
-         
+
 
           <div class="main-panel main-panel-height" >
 
-            
+
 
             {/* main content */}
             <div class="content">
@@ -29,19 +29,19 @@ class BaoCao extends Component {
                   <div class="card-body">
                     <h4 class="card-title font-weight-bold">Báo cáo</h4>
                     {/* <!-- Filter --> */}
-                    
+
                     <SelectBox
                       label='TÌm kiếm lựa chọn theo team'
                       optionContent={['Team Front-End', 'Team PHP', 'Team Node.js', 'Team Back-End']}
                     />
                     {/* <!-- Table --> */}
                     <TableWithButton
-                    tableScope={['ID','Tên người dùng','Điểm đánh giá']}
-                    tableScopeContent={[[1,'Văn An','3/5'],[2,'Văn B','4/5'],[3,'Văn C','5/5']]}
+                      tableScope={['ID', 'Tên người dùng', 'Điểm đánh giá']}
+                      tableScopeContent={[[1, 'Văn An', '3/5'], [2, 'Văn B', '4/5'], [3, 'Văn C', '5/5']]}
                     />
-                    
+
                     {/* <!-- Pagination Start--> */}
-                    <Pagination/>
+                    <Pagination />
                     {/* <!-- End of Pagination --> */}
                   </div>
                 </div>
@@ -49,7 +49,7 @@ class BaoCao extends Component {
               </div>
             </div>
             {/* End */}
-            
+
 
           </div>
 
@@ -63,4 +63,4 @@ class BaoCao extends Component {
 }
 
 
-export default connect(null,{...tesaga})(BaoCao);
+export default connect(null, { ...tesaga })(BaoCao);

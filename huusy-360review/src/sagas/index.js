@@ -23,10 +23,16 @@ function* watchCreateTaskAction() {
         console.log('Watching create task');
         console.log('Call API getDatabase');
         const resp = yield call(getDatabase);
+        /// loi
+
+
+
+
+
         // //============Block cho đến khi call xong===============// 
         console.log('kết quả của response');
         console.log('resp:', resp);
-        const { status, data } = resp;
+        const { status, data, err } = resp;
         if (status === STATUS_CODE.SUCCESS) {
             //dispatch any else action
             console.log('call API success')

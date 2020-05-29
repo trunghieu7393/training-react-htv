@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import '../../styles.css';
 import DanhGiaMentorItem from './DanhGiaMentorItem';
-import {getDatabase,postDatabase,putDatabase,deleteDatabase} from '../../common/actionAPI';
+import { getDatabase, postDatabase, putDatabase, deleteDatabase } from '../../common/actionAPI';
 import * as tesaga from '../../redux/actions/testSagas';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 class DanhGiaMentor extends Component {
   constructor() {
@@ -12,9 +12,9 @@ class DanhGiaMentor extends Component {
     this.state = {
       data: [],
       datathemchidinh: {
-        nguoidanhgia:'',
-        nguoiduocdanhgia:'',
-        thoihan:''
+        nguoidanhgia: '',
+        nguoiduocdanhgia: '',
+        thoihan: ''
       }
     }
   }
@@ -37,35 +37,35 @@ class DanhGiaMentor extends Component {
   //    return () => { ignore = true; }
   // }
   componentDidMount() {
-    const {createRedux}=this.props;
+    const { createRedux } = this.props;
     createRedux()
-    
+
   }
-  handleChange=(e)=> {
-    const {datathemchidinh}= this.state;
-    datathemchidinh[e.target.name]=e.target.value;
-    this.setState({datathemchidinh})
+  handleChange = (e) => {
+    const { datathemchidinh } = this.state;
+    datathemchidinh[e.target.name] = e.target.value;
+    this.setState({ datathemchidinh })
   }
-  postDatabase=()=> {
-    const {createRedux}=this.props;
+  postDatabase = () => {
+    const { createRedux } = this.props;
     createRedux()
-  //  postDatabase('http://localhost:3001/users')
-   const {dataFromAPI} = this.props;
+    postDatabase('http://localhost:3001/users')
+    const { dataFromAPI } = this.props;
     if (!!dataFromAPI) {
-      this.setState({data:dataFromAPI})
+      this.setState({ data: dataFromAPI })
       console.log('setState ok')
     }
   }
-  
+
 
   render() {
-    const {data}=this.state;
-    const {dataFromAPI}=this.props;
-    console.log('data',data)
-    console.log('dataFromAPI',dataFromAPI)
-  // dataFromAPI.map((item,idx)=> {
-  //     console.log('item',item)
-  //   })
+    const { data } = this.state;
+    const { dataFromAPI } = this.props;
+    console.log('data', data)
+    console.log('dataFromAPI', dataFromAPI)
+    // dataFromAPI.map((item,idx)=> {
+    //     console.log('item',item)
+    //   })
     return (
       <div class="">
         <div class="wrapper ">
@@ -107,7 +107,7 @@ class DanhGiaMentor extends Component {
           {/* End header */}
           <div class="main-panel main-panel-height" >
             {/* top fixed */}
-            
+
             {/* End top fixed */}
             {/* main content */}
             <div class="content">
@@ -152,16 +152,16 @@ class DanhGiaMentor extends Component {
                         </tr>
                       </thead>
                       <tbody>
-                        {data.map((item,idx)=>
+                        {data.map((item, idx) =>
                           <DanhGiaMentorItem
-                          key={idx}
-                          nguoidanhgia={item.nguoidanhgia}
-                          nguoiduocdanhgia={item.nguoiduocdanhgia}
-                          thoihan={item.thoihan}
-                          id={item.id}
+                            key={idx}
+                            nguoidanhgia={item.nguoidanhgia}
+                            nguoiduocdanhgia={item.nguoiduocdanhgia}
+                            thoihan={item.thoihan}
+                            id={item.id}
                           />
                         )}
-                        
+
                       </tbody>
                     </table>
 
@@ -190,9 +190,9 @@ class DanhGiaMentor extends Component {
                       </thead>
                       <tbody>
                         <tr>
-                          <td><input type="text" name="nguoidanhgia" placeholder="Nguyễn Văn A" onChange={e=>this.handleChange(e)}></input></td>
-                          <td><input type="text" name="nguoiduocdanhgia" placeholder="Nguyễn Văn B" onChange={e=>this.handleChange(e)}></input></td>
-                          <td><input type="text" name="thoihan" placeholder="19/05/2020" onChange={e=>this.handleChange(e)}></input></td>
+                          <td><input type="text" name="nguoidanhgia" placeholder="Nguyễn Văn A" onChange={e => this.handleChange(e)}></input></td>
+                          <td><input type="text" name="nguoiduocdanhgia" placeholder="Nguyễn Văn B" onChange={e => this.handleChange(e)}></input></td>
+                          <td><input type="text" name="thoihan" placeholder="19/05/2020" onChange={e => this.handleChange(e)}></input></td>
                         </tr>
                       </tbody>
                     </table>
@@ -207,7 +207,7 @@ class DanhGiaMentor extends Component {
               </div>
             </div>
             {/* End */}
-            
+
 
           </div>
 
@@ -219,8 +219,8 @@ class DanhGiaMentor extends Component {
     )
   }
 }
-const mapStateToProps=state => ({
+const mapStateToProps = state => ({
   dataFromAPI: state.api.data
 })
 // export default DanhGiaMentor;
-export default connect(mapStateToProps,{...tesaga})(DanhGiaMentor);
+export default connect(mapStateToProps, { ...tesaga })(DanhGiaMentor);

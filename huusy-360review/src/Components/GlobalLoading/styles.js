@@ -5,12 +5,12 @@ const styles = () => ({
         right: 0,
         top: 0,
         bottom: 0,
-        zIndex: 9999999999999999,
+        zIndex: 9,
         background: 'rgba(0,0,0,0.4)'
     },
     icon:{
         position:'fixed',
-        left:0,
+        left:'20%',
         right:0,
         marginLeft:'auto',
         marginRight:'auto',
