@@ -2,26 +2,31 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import styles from './styles';
 import PropTypes from 'prop-types';
-import LoadingIcon from '../assets/img/loading.gif';
+import LoadingIcon from '../../assets/img/loading.gif';
 
 import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
-import * as uiActions from '../actions/ui';
+import * as uiActions from '../../actions/ui';
 
 
 class GlobalLoading extends Component {
   render() {
-    const { label, url, t, classes, showLoading } = this.props;
+    const { classes, showLoading } = this.props;
     let xhtml = null;
     if (showLoading) {
       xhtml = (
         <div className={classes.globalLoading}>
-          <img src={LoadingIcon} alt="loading" className={classes.icon} />
+          <img src={LoadingIcon} className={classes.icon} alt="loading" />
         </div>
       );
     }
-    
+
     return xhtml;
+    // return (
+    //   <div className={classes.globalLoading}>
+    //     <img src={LoadingIcon} className={classes.icon} alt="loading" />
+    //   </div>
+    // )
   }
 }
 
@@ -44,10 +49,12 @@ const mapDispatchToProps = dispatch => {
 
 const withConnect = connect(
   mapStateToProps,
-  mapDispatchToProps
+  null,
 );
 
 export default compose(
-  withStyles(styles),
-  withConnect
+  withStyles(styles), //order first
+  withConnect, //order second
 )(GlobalLoading);
+
+// export default withStyles(styles)(GlobalLoading);

@@ -5,7 +5,9 @@ import NavMenu from '../navbar/index.js';
 import Footer from '../container/footer/'
 
 
+
 class Layout extends Component {
+
   render() {
     return (
       <Aux>

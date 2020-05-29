@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link, Route, Switch, Redirect } from 'react-router-dom';
-import EvaluationForm from '../container/form/EvaluationForm.js';
-import Report from '../container/report/Report.js';
+import { Link } from 'react-router-dom';
+
 
 //import Aux from '../../hoc/Aux.js'
 import { withTranslation } from 'react-i18next';
@@ -49,11 +48,7 @@ class Menu extends Component {
             </li>
           </ul>
         </div>
-        <Switch>
-          <Route path="/evaluation" exact component={EvaluationForm} />
-          <Route path="/report" component={Report} />
-          <Redirect from="/" to="/evaluation" />
-        </Switch>
+
       </div>
     )
   }

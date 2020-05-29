@@ -13,14 +13,13 @@ import i18next from 'i18next';
 // import i18n (needs to be bundled ;)) 
 import './i18n';
 
-import GlobalLoading from './GlobalLoading/index.js'
+//import GlobalLoading from './components/GlobalLoading/index.js'
 
 
 const app = (
   <Provider store={store}>
     <I18nextProvider i18n={i18next}>
       <BrowserRouter>
-        <GlobalLoading />
         <App />
       </BrowserRouter>
     </I18nextProvider>
