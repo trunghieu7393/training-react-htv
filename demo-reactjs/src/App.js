@@ -6,7 +6,7 @@ import SideMenu from './components/menu/';
 import EvaluationForm from './container/form/EvaluationForm.js';
 import Report from './container/report/Report.js';
 import store from './redux/store';
-import GlobalLoading from './components/GlobalLoading/index';
+// import GlobalLoading from './components/GlobalLoading/index';
 
 import LoadingPage from './components/LoadingPage/index';
 
