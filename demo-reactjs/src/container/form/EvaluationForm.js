@@ -3,13 +3,20 @@ import React, { Component } from 'react';
 
 import UserInformation from '../../components/EvaluationDetail/UserInformation.js';
 import EvaluationTable from '../../components/EvaluationDetail/EvaluationTable.js';
-import LoadingPage from '../../components/LoadingPage/index.js';
+// import LoadingPage from '../../components/LoadingPage/index.js';
+
+import {loadPage} from '../../action/task'
+import {connect} from 'react-redux'
 
 class EvaluationForm extends Component {
+  componentDidMount=()=> {
+    const {loadPage}=this.props;
+    loadPage()
+  }
   render() {
     return (
       <div className="row">
-        <LoadingPage />
+        {/* <LoadingPage /> */}
         {/* <!-- Thông tin người đánh giá --> */}
         <UserInformation />
         {/* <!-- Bảng đánh giá --> */}
@@ -19,4 +26,4 @@ class EvaluationForm extends Component {
   }
 }
 
-export default EvaluationForm;
+export default connect(null,{loadPage}) (EvaluationForm);
