@@ -77,13 +77,11 @@ export const getDatabase = async () => {
         .then(function (res) {
             //response là biến chứa toàn bộ thông tin user
             console.log(res);
-            return PATTERN_DATA(res)
+            return res
         })
         .catch(function (err) {
-
-            
-
             console.log(err);
+            return err;
             throw Error('loi ke cha tao')
         });
     return data;

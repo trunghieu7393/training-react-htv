@@ -5,6 +5,8 @@ import { withTranslation } from 'react-i18next';
 import { useTranslation, Trans } from 'react-i18next';
 import * as tesaga from '../../redux/actions/testSagas';
 import { connect } from 'react-redux';
+import SearchBox from '../Atoms/SearchBox';
+import {filterTask} from '../../redux/actions/api';
 class NavBar extends Component {
   componentDidMount = () => {
     const { createRedux, readRedux, updateRedux, deleteRedux } = this.props;
@@ -13,6 +15,17 @@ class NavBar extends Component {
   handleClick = lng => {
     const { i18n } = this.props;
     i18n.changeLanguage(lng);
+  }
+  handleFilter= e => {
+    const {filterTask} = this.props;
+    filterTask(e.target.value)
+  }
+  renderSearchBox=()=> {
+    let xhtml=null;
+    xhtml=<SearchBox 
+    handleChange={this.handleFilter}
+    />
+    return xhtml;
   }
   render() {
     // const { t, i18n } = useTranslation();
@@ -37,16 +50,17 @@ class NavBar extends Component {
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
 
-            <form>
+            {/* <form>
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search..." />
+                <input type="text" value="" class="form-control" onChange={this.renderSearchBox} placeholder="Search..." />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="nc-icon nc-zoom-split"></i>
                   </div>
                 </div>
               </div>
-            </form>
+            </form> */}
+            {this.renderSearchBox()}
 
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -84,6 +98,6 @@ class NavBar extends Component {
 }
 
 // export default withTranslation('common')(NavBar);
-export default withTranslation('common')(connect(null, { ...tesaga })(NavBar));
+export default withTranslation('common')(connect(null, { ...tesaga, filterTask })(NavBar));
 
 // export default connect(null,{createRedux,readRedux,updateRedux,deleteRedux})(NavBar);

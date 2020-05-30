@@ -9,3 +9,6 @@ export const SHOW_LOADING="SHOW_LOADING";
 export const HIDE_LOADING="HIDE_LOADING";
 export const PLUS1="PLUS1";
 export const PLUS2="PLUS2";
+export const FILTER_TASK="FILTER_TASK";
+export const FILTER_TASK_SUCCESS="FILTER_TASK_SUCCESS";
+export const FILTER_TASK_FAIL="FILTER_TASK_FAIL";

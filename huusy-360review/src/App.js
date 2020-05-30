@@ -21,7 +21,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import './App.scss';
 import './styles.css';
-import GlobalLoading from '../src/Components/GlobalLoading';
+import GlobalLoading from '../src/Components/Atoms/GlobalLoading';
 import { useTranslation, Trans } from 'react-i18next';
 // const store= configureStore();
 class App extends Component {

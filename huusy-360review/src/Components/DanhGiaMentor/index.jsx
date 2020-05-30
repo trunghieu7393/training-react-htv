@@ -152,7 +152,7 @@ class DanhGiaMentor extends Component {
                         </tr>
                       </thead>
                       <tbody>
-                        {data.map((item, idx) =>
+                        {dataFromAPI.map((item, idx) =>
                           <DanhGiaMentorItem
                             key={idx}
                             nguoidanhgia={item.nguoidanhgia}
