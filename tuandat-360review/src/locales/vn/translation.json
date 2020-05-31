@@ -1,7 +1,8 @@
 {
   "menu": {
     "evaluate": "Đánh giá",
-    "question": "Câu hỏi",
+    "create-question": "Tạo câu hỏi",
+    "view-question": "Danh sách các câu hỏi",
     "assign": "Phân công đánh giá",
     "report": "Báo cáo"
   },

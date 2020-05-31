@@ -1,7 +1,8 @@
 {
   "menu": {
     "evaluate": "Evaluate",
-    "question": "Question",
+    "create-question": "Create Question",
+    "view-question": "Question List",
     "assign": "Assign Evaluation",
     "report": "Report"
   },
